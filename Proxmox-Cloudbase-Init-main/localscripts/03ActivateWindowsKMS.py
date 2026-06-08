@@ -5,7 +5,7 @@ import datetime
 log_file = r"C:\Program Files\Cloudbase Solutions\Cloudbase-Init\log\windows-kms-activation.log"
 
 kms_key = "M7XTQ-FN8P6-TTKYV-9D4CC-J462D"
-kms_server = "103.147.122.144"
+kms_server = ""
 
 activate_cmd_path = r"C:\ProgramData\ActivateWindowsKMS.cmd"
 slmgr = r"C:\Windows\System32\slmgr.vbs"
