@@ -52,19 +52,4 @@ run_cmd([cscript, "//nologo", slmgr, "-skms", kms_server])
 run_cmd([cscript, "//nologo", slmgr, "-ato"])
 run_cmd([cscript, "//nologo", slmgr, "-dlv"])
 
-# Create scheduled task to run every 180 days as SYSTEM
-task_name = "Activate Windows KMS Every 180 Days"
-
-run_cmd([
-    r"C:\Windows\System32\schtasks.exe",
-    "/Create",
-    "/TN", task_name,
-    "/TR", activate_cmd_path,
-    "/SC", "DAILY",
-    "/MO", "180",
-    "/RU", "SYSTEM",
-    "/RL", "HIGHEST",
-    "/F"
-])
-
 write_log("Finished Windows KMS activation setup")
